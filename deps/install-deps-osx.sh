@@ -7,7 +7,7 @@ cd googletest
 git init
 git remote add origin https://github.com/google/googletest
 git fetch origin
-git checkout -b master --track origin/master
+git checkout -b main --track origin/main
 
 mkdir -p build
 cd build
