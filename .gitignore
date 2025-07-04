@@ -1,0 +1,7 @@
+.vscode/
+*.cmake
+CMakeCache.txt
+CMakeFiles/
+DartConfiguration.tcl
+deps/googletest/
+Makefile
