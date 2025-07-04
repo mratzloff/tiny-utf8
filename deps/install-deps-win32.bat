@@ -7,7 +7,7 @@ cd vcpkg
 git init
 git remote add origin https://github.com/microsoft/vcpkg.git
 git fetch origin
-git checkout -b master --track origin/master
+git checkout -b main --track origin/main
 
 cmd /C bootstrap-vcpkg.bat
 
