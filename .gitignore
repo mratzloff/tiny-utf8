@@ -1,7 +1,11 @@
+!CMakeLists.txt
 .vscode/
 *.cmake
+build/
 CMakeCache.txt
 CMakeFiles/
 DartConfiguration.tcl
 deps/googletest/
 Makefile
+test/tinyutf8_test
+Testing/
