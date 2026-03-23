@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.21...4.0)
+
 project(tinyutf8 
-    VERSION 4.0.2 
+    VERSION 4.5.0
     DESCRIPTION "Unicode (UTF-8) capable std::string"
-    HOMEPAGE_URL "https://github.com/DuffsDevice/tiny-utf8"
+    HOMEPAGE_URL "https://github.com/mratzloff/tiny-utf8"
     LANGUAGES CXX
 )
 
