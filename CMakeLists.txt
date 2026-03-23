@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.21...4.0)
 project(tinyutf8 
     VERSION 4.0.2 
     DESCRIPTION "Unicode (UTF-8) capable std::string"
@@ -7,7 +7,7 @@ project(tinyutf8
 )
 
 # Make sure that custom modules are found
-list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake)
+list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_SOURCE_DIR}/cmake")
 
 ##############################################
 # Declare dependencies
@@ -15,14 +15,8 @@ list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake)
 include(GNUInstallDirs)
 include(CTest)
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-  set(IS_TOPLEVEL_PROJECT TRUE)
-else()
-  set(IS_TOPLEVEL_PROJECT FALSE)
-endif()
-
-option(TINYUTF8_BUILD_TESTING "Build and run TinyUTF8 tests " ${IS_TOPLEVEL_PROJECT})
-option(TINYUTF8_BUILD_DOC "Generate TinyUTF8 documentation" ${IS_TOPLEVEL_PROJECT})
+option(TINYUTF8_BUILD_TESTING "Build and run TinyUTF8 tests " ${PROJECT_IS_TOP_LEVEL})
+option(TINYUTF8_BUILD_DOC "Generate TinyUTF8 documentation" ${PROJECT_IS_TOP_LEVEL})
 
 # Set conformance with C++11 (with no compiler/vendor extensions)
 set(CMAKE_CXX_STANDARD 11)

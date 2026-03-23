@@ -96,7 +96,7 @@ TEST(TinyUTF8, EraseString)
 	EXPECT_TRUE(str.sso_active());
 	EXPECT_FALSE(str.lut_active());
 
-	auto res1 = str.erase(14);
+	auto res1 = str.erase(str.begin() + 14, str.end());
 
 	EXPECT_EQ(res1, str.end());
 	EXPECT_EQ(str.length(), 14);
